@@ -30,6 +30,8 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
         <Room className="logoIcon" />
         <span>MyPin</span>
       </div>
+      User Name : Pavithra<br/>
+      Password : 123456<br/>
       <form onSubmit={handleSubmit}>
         <input autoFocus placeholder="username" ref={usernameRef} />
         <input
