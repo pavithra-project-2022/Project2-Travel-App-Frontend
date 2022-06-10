@@ -1,11 +1,12 @@
 import "./app.css";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import Map, { Marker, Popup } from "react-map-gl";
 import { useEffect, useState } from "react";
 import { Room, Star, StarBorder } from "@material-ui/icons";
 import axios from "axios";
 import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
+
 
 function App() {
   const myStorage = window.localStorage;
@@ -76,9 +77,9 @@ function App() {
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
-      <ReactMapGL
+      <Map
         {...viewport}
-        mapboxApiAccessToken= {process.env.GATSBY_MAPBOX_KEY}
+        mapboxApiAccessToken= "pk.eyJ1IjoicGF2aXRocmFzZXRodSIsImEiOiJjbDQ0ZG5kaTAwMGg3M2drMWNrc2EwMnI2In0.ZMFFhjklByHegCBcwRRygw"
         width="100%"
         height="100%"
         transitionDuration="200"
@@ -211,7 +212,7 @@ function App() {
             myStorage={myStorage}
           />
         )}
-      </ReactMapGL>
+      </Map>
     </div>
   );
 }
